@@ -1,0 +1,803 @@
+{
+  "info": {
+    "_postman_id": "quiz",
+    "name": "quiz",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "admin/addquestion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/addquestion",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "addquestion"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "question",
+              "value": "",
+              "disabled": false,
+              "description": "question",
+              "type": "text"
+            },
+            {
+              "key": "option_1",
+              "value": "",
+              "disabled": false,
+              "description": "option_1",
+              "type": "text"
+            },
+            {
+              "key": "option_2",
+              "value": "",
+              "disabled": false,
+              "description": "option_2",
+              "type": "text"
+            },
+            {
+              "key": "option_3",
+              "value": "",
+              "disabled": false,
+              "description": "option_3",
+              "type": "text"
+            },
+            {
+              "key": "option_4",
+              "value": "",
+              "disabled": false,
+              "description": "option_4",
+              "type": "text"
+            },
+            {
+              "key": "question_level",
+              "value": "",
+              "disabled": false,
+              "description": "question_level",
+              "type": "text"
+            },
+            {
+              "key": "answer",
+              "value": "",
+              "disabled": false,
+              "description": "answer",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin/leaderboard",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/leaderboard",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "leaderboard"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin/login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/login",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "",
+              "disabled": false,
+              "description": "email",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "disabled": false,
+              "description": "password",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin/userList",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/userList",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "userList"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin/userProfile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/userProfile",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "userProfile"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "",
+              "disabled": false,
+              "description": "user_id",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin/userUpdate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/userUpdate",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "admin",
+            "userUpdate"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "user_id",
+              "value": "",
+              "disabled": false,
+              "description": "id",
+              "type": "text"
+            },
+            {
+              "key": "user_name",
+              "value": "",
+              "disabled": true,
+              "description": "name",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "",
+              "disabled": true,
+              "description": "email",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "disabled": true,
+              "description": "password",
+              "type": "text"
+            },
+            {
+              "key": "phone",
+              "value": "",
+              "disabled": true,
+              "description": "phone",
+              "type": "text"
+            },
+            {
+              "key": "gender",
+              "value": "",
+              "disabled": true,
+              "description": "gender",
+              "type": "text"
+            },
+            {
+              "key": "status",
+              "value": "",
+              "disabled": true,
+              "description": "status",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/login",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "",
+              "disabled": false,
+              "description": "email",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "disabled": false,
+              "description": "password",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/profile",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "profile"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "",
+              "disabled": true,
+              "description": "user_id",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/register",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "register"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "user_name",
+              "value": "",
+              "disabled": false,
+              "description": "user_name",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "",
+              "disabled": false,
+              "description": "email",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "disabled": false,
+              "description": "password",
+              "type": "text"
+            },
+            {
+              "key": "phone",
+              "value": "",
+              "disabled": false,
+              "description": "phone",
+              "type": "text"
+            },
+            {
+              "key": "gender",
+              "value": "",
+              "disabled": false,
+              "description": "gender",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/startquiz",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/startquiz",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "startquiz"
+          ],
+          "query": [
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/submit",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/submit",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "submit"
+          ],
+          "query": [
+            {
+              "key": "question_obj",
+              "value": "",
+              "disabled": false,
+              "description": "question_object",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user/update",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/update",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "user",
+            "update"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "user_name",
+              "value": "",
+              "disabled": true,
+              "description": "name",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "",
+              "disabled": true,
+              "description": "email",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "",
+              "disabled": true,
+              "description": "password",
+              "type": "text"
+            },
+            {
+              "key": "phone",
+              "value": "",
+              "disabled": true,
+              "description": "phone",
+              "type": "text"
+            },
+            {
+              "key": "gender",
+              "value": "",
+              "disabled": true,
+              "description": "gender",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

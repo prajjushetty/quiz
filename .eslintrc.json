@@ -1,0 +1,23 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "njs2-lint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "globals": {
+    "AutoLoad": true,
+    "baseAction": true,
+    "baseInitialize": true,
+    "basePkg": true,
+    "SQLManager": true,
+    "MongoManager": true,
+    "GLB": true
+  },
+  "rules": {}
+}
