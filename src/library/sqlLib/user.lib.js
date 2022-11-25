@@ -1,4 +1,5 @@
-const { USER_TYPE, STATUS, LEADERBOARD_LIMIT } = require("../../global/constants");
+const SQLManager = require('@njs2/sql');
+const { USER_TYPE, STATUS, LEADERBOARD_LIMIT } = require('../../global/constants');
 
 class user {
     async getUserDetail(whereClause) {

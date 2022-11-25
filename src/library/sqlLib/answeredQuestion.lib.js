@@ -1,4 +1,4 @@
-class answered_question {
+class answeredQuestion {
     async getAnsweredQuestionDetail(whereClause) {
         return await SQLManager.findOne('answered_question', whereClause);
     }
@@ -20,4 +20,4 @@ class answered_question {
     }
 }
 
-module.exports = new answered_question;
+module.exports = new answeredQuestion;
