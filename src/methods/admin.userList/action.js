@@ -14,7 +14,7 @@ class AdminUserListAction extends baseAction {
                     email: users[i].email,
                     phone: users[i].phone,
                     gender: users[i].gender
-                }
+                };
             }
             this.setResponse('SUCCESS');
             return { user_list: userList };

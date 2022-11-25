@@ -1,20 +1,20 @@
 
 class AdminLeaderboardInitalize extends baseInitialize {
 
-  constructor() {
-    super();
-    this.initializer =  {};
-    this.initializer.isSecured = true; // values: true/false
-    this.initializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
-  }
+    constructor() {
+        super();
+        this.initializer = {};
+        this.initializer.isSecured = true; // values: true/false
+        this.initializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    }
 
-  getParameter() {
-    const param = {
+    getParameter() {
+        const param = {
 
-    };
+        };
 
-    return { ...param };
-  }
+        return { ...param };
+    }
 }
 
 module.exports = AdminLeaderboardInitalize;
