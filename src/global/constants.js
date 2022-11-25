@@ -20,6 +20,9 @@ constant.QUESTION_LEVEL = {
 };
 
 constant.LEADERBOARD_LIMIT = 10;
+constant.COUNT_OF_QUESTIONS_TO_WIN = 7;
+constant.POINT_FOR_CORRECT_ANSWER = 10;
+constant.POINT_FOR_WRONG_ANSWER = 5;
 
 constant.STATUS = {
   ACTIVE: 1,
@@ -39,7 +42,7 @@ constant.STATUS = {
 
 constant.EMAIL_VERIFICATION_MAX_TIME_SECONDS = 10 * 60;
 
-constant.CONNECTION_HANDLER_METHOD = null;
-constant.DISCONNECTION_HANDLER_METHOD = null;
+constant.CONNECTION_HANDLER_METHOD = 'sockets/connect';
+constant.DISCONNECTION_HANDLER_METHOD = 'sockets/disconnect';
 
 module.exports = constant;
