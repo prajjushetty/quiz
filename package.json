@@ -18,12 +18,12 @@
     "ley": "^0.8.1",
     "nodemon": "^2.0.12",
     "prettier": "2.0.5",
-    "serverless-offline": "^7.1.0",
+    "serverless-offline": "^8.8.0",
     "serverless-prune-plugin": "^1.5.1",
     "sql-query-generator": "github:flawidjuego/sql-query-generator"
   },
   "dependencies": {
-    "@njs2/base": "git+https://github.com/Njs2/njs2-base.git#main",
+    "@njs2/base": "github:Njs2/njs2-base#a81c9ebd00cd67b646bbf1da2fee40c32a77ace6",
     "@njs2/sql": "^2.1.0",
     "bcryptjs": "^2.4.3",
     "validator": "^13.7.0"

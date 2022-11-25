@@ -417,6 +417,165 @@
       "response": []
     },
     {
+      "name": "sockets/connect",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/sockets/connect",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "sockets",
+            "connect"
+          ],
+          "query": [
+            {
+              "key": "socket_id",
+              "value": "",
+              "disabled": false,
+              "description": "socket_id",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sockets/disconnect",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/sockets/disconnect",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "sockets",
+            "disconnect"
+          ],
+          "query": [
+            {
+              "key": "socket_id",
+              "value": "",
+              "disabled": true,
+              "description": "socket_id",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sockets/sendmessage",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          },
+          {
+            "key": "access_token",
+            "value": "",
+            "description": "JWT access token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/sockets/sendmessage",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "sockets",
+            "sendmessage"
+          ],
+          "query": [
+            {
+              "key": "message",
+              "value": "",
+              "disabled": true,
+              "description": "message",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "user/login",
       "request": {
         "method": "POST",
@@ -661,7 +820,7 @@
     {
       "name": "user/submit",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [
           {
             "key": "enc_state",
@@ -692,13 +851,16 @@
           "path": [
             "user",
             "submit"
-          ],
-          "query": [
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
             {
-              "key": "question_obj",
+              "key": "question",
               "value": "",
               "disabled": false,
-              "description": "question_object",
+              "description": "question",
               "type": "text"
             },
             {
