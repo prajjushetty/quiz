@@ -23,7 +23,7 @@ class UserSubmitAction extends baseAction {
             for (let i = 0; i < questionId.length; i++) {
                 const answeredQuestion = await getQuestionDetail({ question_id: questionId[i] });
                 answeredQuestionsIds.push(questionId[i]);
-                if (option[i] === answeredQuestion.answer) {
+                if (option[i] == answeredQuestion.answer) {
                     score = score + (level * POINT_FOR_CORRECT_ANSWER);
                     count = count + 1;
                 } else {
