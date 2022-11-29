@@ -28,6 +28,15 @@ class user {
          `);
         return result[0];
     }
+
+    async getUsers(userIds) {
+        const result = await SQLManager.doExecuteRawQuery(`
+        SELECT * 
+        FROM user
+        WHERE user_id IN (${userIds.toString()})
+        `);
+        return result[0];
+    }
 }
 
 module.exports = new user;

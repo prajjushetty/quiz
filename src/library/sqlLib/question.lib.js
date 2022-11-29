@@ -15,7 +15,7 @@ class question {
         return await SQLManager.insert('question', questionObj);
     }
 
-    async getQuestions(question_level, limit, questions = []) {
+    async getQuestions(questionLevel, limit, questions = []) {
         let appendQuery = '';
         if (questions.length) {
             appendQuery = ` and question_id not in (${questions.toString()}) `;
@@ -23,7 +23,7 @@ class question {
         const result = await SQLManager.doExecuteRawQuery(`
         SELECT *
         FROM question 
-        WHERE question_level = ${question_level}
+        WHERE question_level = ${questionLevel}
         ${appendQuery}
         ORDER by rand() limit ${limit}
       `);
