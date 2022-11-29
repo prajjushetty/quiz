@@ -10,6 +10,13 @@ class FriendRemoveInitalize extends baseInitialize {
 
     getParameter() {
         const param = {
+            'friendRequestId': {
+                'name': 'friend_request_id',
+                'type': 'number',
+                'description': 'friend request id',
+                'required': true,
+                'default': ''
+            },
             'otherUserId': {
                 'name': 'other_user_id',
                 'type': 'number',
