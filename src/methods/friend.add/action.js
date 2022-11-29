@@ -47,6 +47,7 @@ class FriendAddAction extends baseAction {
             'user_name': userObj.user_name,
           }
         });
+
       }
       this.setResponse('SUCCESS');
       return {};
