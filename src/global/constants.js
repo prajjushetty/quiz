@@ -7,9 +7,11 @@ constant.PHONE_NUMBER_LENGTH = 10;
 
 constant.BLOCK_USER = 1;
 constant.UNBLOCK_USER = 2;
-constant.ACCEPT_FRIEND_REQUEST = 1;
-constant.REJECT_FRIEND_REQUEST = 2;
 
+constant.FRIEND_REQUEST_ACTION ={
+  ACCEPT: 1,
+  REJECT: 2
+}
 
 constant.USER_TYPE = {
   ADMIN: 1,
@@ -45,6 +47,16 @@ constant.STATUS = {
 };
 
 constant.EMAIL_VERIFICATION_MAX_TIME_SECONDS = 10 * 60;
+
+constant.GAME_EVENT_TYPE = {
+  MESSAGE_RECEIVED: 1,
+  FRIEND_REQUEST: 2,
+};
+
+constant.GAME_EVENT = {
+  [constant.GAME_EVENT_TYPE.MESSAGE_RECEIVED]: 'message_received',
+  [constant.GAME_EVENT_TYPE.FRIEND_REQUEST]: 'friend_request',
+};
 
 constant.CONNECTION_HANDLER_METHOD = 'sockets/connect';
 constant.DISCONNECTION_HANDLER_METHOD = 'sockets/disconnect';
