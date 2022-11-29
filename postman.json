@@ -562,6 +562,13 @@
           "mode": "urlencoded",
           "urlencoded": [
             {
+              "key": "friend_request_id",
+              "value": "",
+              "disabled": false,
+              "description": "friend request id",
+              "type": "text"
+            },
+            {
               "key": "other_user_id",
               "value": "",
               "disabled": true,
@@ -624,13 +631,6 @@
               "value": "",
               "disabled": false,
               "description": "friend request id",
-              "type": "text"
-            },
-            {
-              "key": "other_user_id",
-              "value": "",
-              "disabled": false,
-              "description": "other user id",
               "type": "text"
             },
             {
