@@ -1,15 +1,15 @@
-const { STATUS, ACCEPT_FRIEND_REQUEST, REJECT_FRIEND_REQUEST } = require('../../global/constants');
+const { STATUS, FRIEND_REQUEST_ACTION } = require('../../global/constants');
 const { getFriendDetail, updateFriend } = require('../../library/sqlLib/friend.lib');
 
 class FriendRequestActionAction extends baseAction {
 
     async executeMethod() {
         try {
-            const { friendRequestId, otherUserId, action } = this;
-            const friendRequest = await getFriendDetail({ friend_request_id: friendRequestId, other_user_id: otherUserId });
+            const { userObj, friendRequestId, action } = this;
+            const friendRequest = await getFriendDetail({ friend_request_id: friendRequestId, other_user_id: userObj.user_id });
             if (!friendRequest) {
                 this.setResponse('INVALID_DATA', {
-                    paramName: 'Friend request id',
+                    paramName: 'friend_request_id',
                 });
                 return {};
             }
@@ -21,15 +21,15 @@ class FriendRequestActionAction extends baseAction {
                     this.setResponse('ALREADY_FRIEND');
                     return {};
                 } else if (friendRequest.status === STATUS.PENDING) {
-                    if (action === ACCEPT_FRIEND_REQUEST) {
+                    if (action === FRIEND_REQUEST_ACTION.ACCEPT) {
                         await updateFriend({ friend_request_id: friendRequestId }, { status: STATUS.ACCEPTED });
                     }
-                    if (action === REJECT_FRIEND_REQUEST) {
+                    if (action === FRIEND_REQUEST_ACTION.REJECT) {
                         await updateFriend({ friend_request_id: friendRequestId }, { status: STATUS.REJECTED });
                     }
                 } else {
                     this.setResponse('INVALID_DATA', {
-                        paramName: 'Friend request id',
+                        paramName: 'friend_request_id',
                     });
                     return {};
                 }

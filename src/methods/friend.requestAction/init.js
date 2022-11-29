@@ -17,13 +17,6 @@ class FriendRequestActionInitalize extends baseInitialize {
                 'required': true,
                 'default': ''
             },
-            'otherUserId' : {
-                'name': 'other_user_id',
-                'type': 'number',
-                'description': 'other user id',
-                'required': true,
-                'default': ''
-            },
             'action': {
                 'name': 'action',
                 'type': 'number',
