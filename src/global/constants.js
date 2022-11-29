@@ -7,6 +7,9 @@ constant.PHONE_NUMBER_LENGTH = 10;
 
 constant.BLOCK_USER = 1;
 constant.UNBLOCK_USER = 2;
+constant.ACCEPT_FRIEND_REQUEST = 1;
+constant.REJECT_FRIEND_REQUEST = 2;
+
 
 constant.USER_TYPE = {
   ADMIN: 1,
@@ -37,7 +40,8 @@ constant.STATUS = {
   KICKED: 10,
   FORCE_QUIT: 11,
   COMPLETED: 12,
-  FORCE_CLOSE: 13
+  FORCE_CLOSE: 13,
+  REMOVED: 14
 };
 
 constant.EMAIL_VERIFICATION_MAX_TIME_SECONDS = 10 * 60;
