@@ -24,30 +24,20 @@ class FriendAddAction extends baseAction {
           this.setResponse('ALREADY_FRIEND'); {
             return {};
           }
-        } else {
-          await updateFriend({ user_id: friend.user_id, other_user_id: friend.other_user_id }, { status: STATUS.PENDING });
-          sockets.emit(user.socket_id, {
-            'eventCode': GAME_EVENT_TYPE.FRIEND_REQUEST,
-            'eventMessage': GAME_EVENT[GAME_EVENT_TYPE.FRIEND_REQUEST],
-            'eventData': {
-              'friend_request_id': friend.friend_request_id,
-              'user_id': userObj.user_id,
-              'user_name': userObj.user_name,
-            }
-          });
         }
-      } else {
-        const requestedFriend = await createFriend({ user_id: userObj.user_id, other_user_id: otherUserId });
+      }
+
+      const friendRequestId = await createFriend({ user_id: userObj.user_id, other_user_id: otherUserId });
+      if (user.socket_id.length > 0) {
         sockets.emit(user.socket_id, {
           'eventCode': GAME_EVENT_TYPE.FRIEND_REQUEST,
           'eventMessage': GAME_EVENT[GAME_EVENT_TYPE.FRIEND_REQUEST],
           'eventData': {
-            'friend_request_id': requestedFriend,
+            'friend_request_id': friendRequestId,
             'user_id': userObj.user_id,
             'user_name': userObj.user_name,
           }
         });
-
       }
       this.setResponse('SUCCESS');
       return {};
