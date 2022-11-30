@@ -5,7 +5,7 @@ class FriendRemoveAction extends baseAction {
 
     async executeMethod() {
         try {
-            const { userObj, friendRequestId, otherUserId } = this;
+            const { userObj, otherUserId } = this;
             const friend = await getFriends(userObj.user_id, otherUserId);
             if (!friend) {
                 this.setResponse('NOT_FRIEND');
@@ -13,7 +13,7 @@ class FriendRemoveAction extends baseAction {
             }
             else {
                 if (friend.status === STATUS.ACCEPTED) {
-                    await updateFriend({ friend_request_id: friendRequestId }, { status: STATUS.REMOVED });
+                    await updateFriend({ friend_request_id: friend.friend_request_id }, { status: STATUS.REMOVED });
                 } else {
                     this.setResponse('NOT_FRIEND');
                     return {};
