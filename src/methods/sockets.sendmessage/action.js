@@ -1,5 +1,5 @@
 const { sockets } = require('@njs2/base');
-const { USER_TYPE, GAME_EVENT_TYPE, GAME_EVENT } = require('../../global/constants');
+const { USER_TYPE, GAME_EVENT_TYPE, GAME_EVENT, STATUS } = require('../../global/constants');
 const { getUserList, getUserDetail } = require('../../library/sqlLib/user.lib');
 
 class SocketsSendmessageAction extends baseAction {
@@ -9,7 +9,7 @@ class SocketsSendmessageAction extends baseAction {
             const { message, socketId } = this;
             const user = await getUserDetail({ socket_id: socketId });
             if (user) {
-                const users = await getUserList({ user_type: USER_TYPE.USER });
+                const users = await getUserList({ user_type: USER_TYPE.USER, status: STATUS.ACTIVE});
 
                 const socketIds = [];
                 for (let i = 0; i < users.length; i++) {
